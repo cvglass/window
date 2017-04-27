@@ -1,7 +1,7 @@
 {
   "name": "window",
   "version": "1.0.0",
-  "description": "",
+  "description": "a weather app so you don't have to look outside to figure out what to wear",
   "main": "index.js",
   "dependencies": {
     "babel-cli": "^6.11.4",
