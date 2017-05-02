@@ -35,9 +35,11 @@
     "webpack": "^1.13.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js",
-    "build": "webpack"
+    "start": "cross-env NODE_ENV=production node_modules/.bin/babel-node --presets react,es2015 src/server.js",
+    "start-dev": "npm run start-dev-hmr",
+    "start-dev-single-page": "node_modules/.bin/http-server src/static",
+    "start-dev-hmr": "node_modules/.bin/webpack-dev-server --progress --inline --hot --open",
+    "build": "cross-env NODE_ENV=production node_modules/.bin/webpack -p"
   },
   "keywords": [],
   "author": "",
