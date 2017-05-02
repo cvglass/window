@@ -1,10 +1,14 @@
-import path from 'path';
-import { Server } from 'http';
+'use strict'
+
+const path = require('path');
+const Server = require('http').Server;
 const express = require('express');
-import React from 'react'
-import routes from './routes'
-import { renderToString } from 'react-dom/server';
-import { match, RouterContext } from 'react-router';
+const React = require('react');
+const routes = require('./routes');
+const renderToString = require('react-dom/server');
+const reactRouter = require('react-router');
+const match = reactRouter.match;
+const RouterContext = reactRouter.RouterContext
 
 const app = new express();
 const server = new Server(app);
@@ -13,7 +17,7 @@ app.use(express.static(path.join(__dirname, 'static')));
 
 app.get('*', (req, res) => {
   match(
-    { routes, location: req.url},
+    {routes: routes, location: req.url},
     (err, redirectionLocation, renderProps) => {
       if (err) {
         return res.status(500).send(err.message)

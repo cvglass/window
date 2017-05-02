@@ -9,3 +9,10 @@ export default class AppRoutes extends React.Component {
     );
   }
 }
+
+
+// const React = require('react');
+// const reactRouter = require('react-router');
+// const Router = reactRouter.Router;
+// const browserHistory = reactRouter.browserHistory
+// import routes from '../routes';

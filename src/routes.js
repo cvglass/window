@@ -1,13 +1,14 @@
-import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+const React = require('react');
+// const reactRouter = require('react-router');
+const Route = require('react-router').Route;
 
 //components
-import Home from './components/home'
+const Home = require('./components/home');
 
-const routes = (
-  <Route path="/" component={Home}>
-  </Route>
-);
-
-export default routes
-
+class routes extends React.Component {
+  render() {
+    return(
+      <Route path="/" component={Home} />
+    )
+  }
+}

@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 
 const Home = () => {
   return (
-    <h3>HOME</h3>
+    <div>
+      <h3>HOME</h3>
+      <p>BLAH BLAH BLAH</p>
+    </div>
   )
 }
 
